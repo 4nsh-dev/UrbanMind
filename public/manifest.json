@@ -1,0 +1,29 @@
+{
+  "short_name": "Urban Mind",
+  "name": "Urban Mind - Civic Intelligence Network",
+  "description": "A Google Material 3 inspired civic intelligence network for reporting, community verification, and AI-powered urban insights.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#4285F4",
+  "display": "standalone",
+  "orientation": "portrait"
+}

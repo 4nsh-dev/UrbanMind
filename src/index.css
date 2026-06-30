@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Google Sans", "Product Sans", "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* MD3 Color Token Mappings to Tailwind Classes */
+  --color-md-primary: var(--md-sys-color-primary);
+  --color-md-on-primary: var(--md-sys-color-on-primary);
+  --color-md-primary-container: var(--md-sys-color-primary-container);
+  --color-md-on-primary-container: var(--md-sys-color-on-primary-container);
+  
+  --color-md-secondary: var(--md-sys-color-secondary);
+  --color-md-on-secondary: var(--md-sys-color-on-secondary);
+  --color-md-secondary-container: var(--md-sys-color-secondary-container);
+  --color-md-on-secondary-container: var(--md-sys-color-on-secondary-container);
+  
+  --color-md-tertiary: var(--md-sys-color-tertiary);
+  --color-md-on-tertiary: var(--md-sys-color-on-tertiary);
+  --color-md-tertiary-container: var(--md-sys-color-tertiary-container);
+  --color-md-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
+  
+  --color-md-surface: var(--md-sys-color-surface);
+  --color-md-on-surface: var(--md-sys-color-on-surface);
+  --color-md-surface-variant: var(--md-sys-color-surface-variant);
+  --color-md-on-surface-variant: var(--md-sys-color-on-surface-variant);
+  
+  --color-md-background: var(--md-sys-color-background);
+  --color-md-on-background: var(--md-sys-color-on-background);
+  
+  --color-md-outline: var(--md-sys-color-outline);
+  --color-md-outline-variant: var(--md-sys-color-outline-variant);
+  
+  --color-md-error: var(--md-sys-color-error);
+  --color-md-on-error: var(--md-sys-color-on-error);
+  --color-md-error-container: var(--md-sys-color-error-container);
+  --color-md-on-error-container: var(--md-sys-color-on-error-container);
+
+  /* MD3 Shadow/Elevation Levels */
+  --shadow-md-elevation-1: 0px 1px 3px 1px rgba(0,0,0,0.12), 0px 1px 2px 0px rgba(0,0,0,0.20);
+  --shadow-md-elevation-2: 0px 2px 6px 2px rgba(0,0,0,0.12), 0px 1px 2px 0px rgba(0,0,0,0.20);
+  --shadow-md-elevation-3: 0px 1px 3px 0px rgba(0,0,0,0.24), 0px 4px 8px 3px rgba(0,0,0,0.12);
+  --shadow-md-elevation-4: 0px 2px 3px 0px rgba(0,0,0,0.24), 0px 6px 10px 4px rgba(0,0,0,0.12);
+  --shadow-md-elevation-5: 0px 4px 4px 0px rgba(0,0,0,0.24), 0px 8px 12px 6px rgba(0,0,0,0.12);
+}
+
+/* Material Design 3 Design System Variables */
+:root, :root.light {
+  --md-sys-color-primary: #0B57D0;             /* Google Blue */
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #D3E3FD;    /* Light Google Blue container */
+  --md-sys-color-on-primary-container: #041E49;
+
+  --md-sys-color-secondary: #00639B;           /* Civic blue-teal accent */
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #C2E7FF;
+  --md-sys-color-on-secondary-container: #001D35;
+
+  --md-sys-color-tertiary: #475B71;            /* Civic warm gray accent */
+  --md-sys-color-on-tertiary: #FFFFFF;
+  --md-sys-color-tertiary-container: #DCE3E9;
+  --md-sys-color-on-tertiary-container: #141C24;
+
+  --md-sys-color-background: #F8F9FA;          /* Google Standard Material light grey */
+  --md-sys-color-on-background: #1F1F1F;
+
+  --md-sys-color-surface: #FFFFFF;
+  --md-sys-color-on-surface: #1F1F1F;
+  --md-sys-color-surface-variant: #F1F3F4;     /* Google input background / secondary blocks */
+  --md-sys-color-on-surface-variant: #444746;
+
+  --md-sys-color-outline: #747775;             /* Subtle accent/borders */
+  --md-sys-color-outline-variant: #E0E2E4;     /* Splitters and card boundaries */
+
+  --md-sys-color-error: #B3261E;
+  --md-sys-color-on-error: #FFFFFF;
+  --md-sys-color-error-container: #F9DEDC;
+  --md-sys-color-on-error-container: #410E0B;
+}
+
+:root.dark {
+  --md-sys-color-primary: #0B57D0;             /* Google Blue */
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #D3E3FD;    /* Light Google Blue container */
+  --md-sys-color-on-primary-container: #041E49;
+
+  --md-sys-color-secondary: #00639B;           /* Civic blue-teal accent */
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #C2E7FF;
+  --md-sys-color-on-secondary-container: #001D35;
+
+  --md-sys-color-tertiary: #475B71;            /* Civic warm gray accent */
+  --md-sys-color-on-tertiary: #FFFFFF;
+  --md-sys-color-tertiary-container: #DCE3E9;
+  --md-sys-color-on-tertiary-container: #141C24;
+
+  --md-sys-color-background: #F8F9FA;          /* Google Standard Material light grey */
+  --md-sys-color-on-background: #1F1F1F;
+
+  --md-sys-color-surface: #FFFFFF;
+  --md-sys-color-on-surface: #1F1F1F;
+  --md-sys-color-surface-variant: #F1F3F4;     /* Google input background / secondary blocks */
+  --md-sys-color-on-surface-variant: #444746;
+
+  --md-sys-color-outline: #747775;             /* Subtle accent/borders */
+  --md-sys-color-outline-variant: #E0E2E4;     /* Splitters and card boundaries */
+
+  --md-sys-color-error: #B3261E;
+  --md-sys-color-on-error: #FFFFFF;
+  --md-sys-color-error-container: #F9DEDC;
+  --md-sys-color-on-error-container: #410E0B;
+}
+
+/* Apply MD3 theme values directly to base document elements */
+html, body {
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  font-family: "Google Sans", "Product Sans", "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+
+/* Premium Glassmorphism and Minimalist Design Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.04);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.06);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.02);
+}
+
+.glass-card-selected {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(66, 133, 244, 0.4);
+  box-shadow: 0 8px 30px rgba(66, 133, 244, 0.06);
+}
+
+.glass-button {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #1F2937;
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.glass-button-active {
+  background: #111827;
+  color: #FFFFFF;
+  border-color: #111827;
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: #4285F4;
+  box-shadow: 0 0 0 4px rgba(66, 133, 244, 0.1);
+}
+
+/* Custom animation durations and easing matches */
+.transition-custom {
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card-trigger {
+  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card-trigger:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   CSS Media Queries for Advanced Responsive Layout and Typography
+   ========================================================================== */
+
+/* 1. Mobile & Micro-screen Devices (Up to 480px width) */
+@media screen and (max-width: 480px) {
+  /* Prevent horizontal page overflows */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Compress padding to maximize content readability */
+  .p-6, .p-8 {
+    padding: 1rem !important;
+  }
+  .px-6, .px-8 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .py-6, .py-8 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .gap-6, .gap-8 {
+    gap: 0.75rem !important;
+  }
+
+  /* Scale down display headings so they don't break wraps in small screens */
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+    letter-spacing: -0.02em !important;
+  }
+  h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+  h3 {
+    font-size: 1.125rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  /* Optimize interactive buttons and inputs for touch targets (min 44px) */
+  button, a {
+    min-height: 40px;
+    display-inline-flex: align-items-center;
+  }
+  input, select, textarea {
+    font-size: 16px !important; /* Prevents iOS auto-zoom on input focus */
+    min-height: 42px;
+  }
+
+  /* Hide vertical and horizontal utility scrollbars cleanly while preserving native inertia scrolling */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+  
+  /* Make lists and bento grids collapse to single columns safely */
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 2. Small to Medium Devices (Tablet mode: 481px to 768px width) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .p-8 {
+    padding: 1.25rem !important;
+  }
+  .px-8 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  
+  /* Scale headings for tablet displays */
+  h1 {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+  
+  /* Force 2-columns in bento grids where appropriate for tablets */
+  .md-bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 3. Medium to Large Screens (Laptops & Desktops: 769px to 1200px) */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  /* Prevent cards from look too dense or spaced out */
+  .lg-bento-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 4. Ultra-Wide Screens (Desktop/TV: 1440px and above) */
+@media screen and (min-width: 1440px) {
+  /* Establish clean, elegant reading gutters with extra negative space */
+  .max-w-7xl {
+    max-width: 1440px !important;
+  }
+  
+  /* Enhance the aesthetic parallax hover effect on large monitors */
+  .hover-card-trigger:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.08);
+  }
+}
+
+/* MapLibre GL Integration Stylesheet and Custom Overrides */
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+/* MapLibre custom popup glassmorphism overlay style */
+.maplibregl-popup-content {
+  padding: 0 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.12), 0 5px 15px -3px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(228, 228, 231, 0.9) !important;
+  overflow: hidden !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(12px) !important;
+  max-width: 280px !important;
+}
+
+.maplibregl-popup-close-button {
+  padding: 6px 10px !important;
+  font-size: 16px !important;
+  color: #71717a !important;
+  outline: none !important;
+  border-radius: 50% !important;
+  transition: background-color 0.2s !important;
+  margin-top: 4px !important;
+  margin-right: 4px !important;
+}
+
+.maplibregl-popup-close-button:hover {
+  background-color: rgba(244, 244, 245, 0.9) !important;
+  color: #18181b !important;
+}
+
+.maplibregl-popup-tip {
+  border-top-color: rgba(255, 255, 255, 0.98) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+
+
+

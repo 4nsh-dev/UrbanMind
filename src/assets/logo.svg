@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Definitions for Gradients and Shadows -->
+  <defs>
+    <!-- Map Pin Shadow -->
+    <filter id="pin-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#1A73E8" flood-opacity="0.15" />
+    </filter>
+    
+    <!-- Linear Gradients -->
+    <linearGradient id="blue-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4" />
+      <stop offset="100%" stop-color="#1A73E8" />
+    </linearGradient>
+    <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34A853" />
+      <stop offset="100%" stop-color="#1E8E3E" />
+    </linearGradient>
+    <linearGradient id="yellow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBC05" />
+      <stop offset="100%" stop-color="#F29900" />
+    </linearGradient>
+    <linearGradient id="red-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA4335" />
+      <stop offset="100%" stop-color="#D93025" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Side: Profile & Brain (Civic Mind) -->
+  <!-- Blue Side Profile of Human Head -->
+  <path d="M 120,440 L 120,380 C 120,340 100,320 80,310 C 65,300 55,285 55,265 C 55,245 70,230 85,230 L 90,230 C 90,230 80,210 80,195 C 80,180 90,170 100,170 L 105,170 C 105,170 95,150 95,135 C 95,115 110,100 130,100 C 150,100 190,110 215,135 C 240,160 250,190 250,225 L 250,260 C 250,290 220,325 180,355 L 150,380 L 150,440" 
+        fill="none" 
+        stroke="url(#blue-grad)" 
+        stroke-width="18" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- The Brain (Intelligence Engine Inside the Profile) -->
+  <!-- Base Blue Brain Outline -->
+  <path d="M 140,260 C 125,260 115,250 115,235 C 115,220 125,210 140,210" 
+        fill="none" 
+        stroke="url(#blue-grad)" 
+        stroke-width="10" 
+        stroke-linecap="round" />
+  
+  <path d="M 140,210 C 135,190 145,170 165,170" 
+        fill="none" 
+        stroke="url(#red-grad)" 
+        stroke-width="12" 
+        stroke-linecap="round" />
+
+  <path d="M 165,170 C 185,160 210,170 215,190" 
+        fill="none" 
+        stroke="url(#yellow-grad)" 
+        stroke-width="12" 
+        stroke-linecap="round" />
+
+  <path d="M 215,190 C 230,195 235,210 230,225 C 225,240 210,250 195,250 C 190,265 175,275 160,270 C 145,265 140,260 140,260" 
+        fill="none" 
+        stroke="url(#green-grad)" 
+        stroke-width="12" 
+        stroke-linecap="round" />
+
+  <!-- Center Core Stem in Blue -->
+  <path d="M 175,230 C 175,250 165,280 165,300" 
+        fill="none" 
+        stroke="url(#blue-grad)" 
+        stroke-width="10" 
+        stroke-linecap="round" />
+
+
+  <!-- Right Side: Google-Style Stylized Street Map (Civic Grid) -->
+  <!-- Map Base Card (Rounded Rectangle) -->
+  <g transform="translate(240, 240)">
+    <!-- Main Map Container -->
+    <rect x="0" y="0" width="220" height="180" rx="36" fill="#F8F9FA" stroke="#E8EAED" stroke-width="6" />
+    
+    <!-- Clip Path for street regions within the rounded map container -->
+    <clipPath id="map-clip">
+      <rect x="3" y="3" width="214" height="174" rx="32" />
+    </clipPath>
+    
+    <!-- Colored Map Segments clipped to the container -->
+    <g clip-path="url(#map-clip)">
+      <!-- Segment 1: Green Park Region (Bottom Left / Mid) -->
+      <path d="M -20,100 L 120,40 L 160,190 L -20,190 Z" fill="#34A853" fill-opacity="0.85" />
+      
+      <!-- Segment 2: Yellow/Orange Sector (Right Top) -->
+      <path d="M 120,-10 L 240,-10 L 240,110 L 110,65 Z" fill="#FBBC05" fill-opacity="0.85" />
+      
+      <!-- Segment 3: Blue Water/Zone (Left/Top) -->
+      <path d="M -10,-10 L 120,-10 L 110,65 L -10,120 Z" fill="#4285F4" fill-opacity="0.85" />
+      
+      <!-- Segment 4: Gray Urban Sector (Right Bottom) -->
+      <path d="M 110,65 L 240,110 L 240,200 L 120,190 Z" fill="#BDC1C6" />
+      
+      <!-- White Grid Divider Lines (Streets) -->
+      <line x1="-10" y1="110" x2="230" y2="30" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" />
+      <line x1="115" y1="-10" x2="145" y2="190" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" />
+    </g>
+
+    <!-- Map Boarder Highlight to make it pop -->
+    <rect x="0" y="0" width="220" height="180" rx="36" fill="none" stroke="#DADCE0" stroke-width="4" />
+  </g>
+
+  <!-- Blue Map Pin pointing exactly onto the green/white intersection -->
+  <g transform="translate(365, 235)" filter="url(#pin-shadow)">
+    <!-- Pin Shape -->
+    <path d="M 0,0 C -35,-35 -55,-65 -55,-100 C -55,-130 -30,-155 0,-155 C 30,-155 55,-130 55,-100 C 55,-65 35,-35 0,0 Z" 
+          fill="url(#blue-grad)" />
+    
+    <!-- Inner Pin White Hole -->
+    <circle cx="0" cy="-100" r="18" fill="#FFFFFF" />
+  </g>
+</svg>
