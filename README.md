@@ -5,7 +5,7 @@ UrbanMind is an AI-powered community platform designed to help people report civ
 ## 🌐 Live Demo
 
 **Deployed Application:**
-https://community-hero-980507869557.asia-southeast1.run.app
+https://urban-mind-aml6h1pg4-anshdeep1s-projects.vercel.app/
 
 ---
 
@@ -129,14 +129,6 @@ screenshots/
 * Interactive maps
 * Analytics dashboard
 * Progressive Web App (PWA)
-
----
-
-
-
-**Live URL**
-
-https://urban-mind-aml6h1pg4-anshdeep1s-projects.vercel.app/
 
 ---
 
